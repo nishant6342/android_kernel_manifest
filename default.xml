@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote  name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
+
+  <remote name="aosp" 
+          fetch="https://android.googlesource.com/" />
+  <remote  name="github"
+    fetch="https://github.com/" />
+  <remote  name="gitlab"
+    fetch="https://gitlab.com/" />
+
+  <!-- AOSP -->
   <default revision="master-kernel-build-2021" remote="aosp" sync-j="4" />
-
   <superproject name="kernel/superproject" remote="aosp"/>
-
   <project path="build" name="kernel/build" />
   <project path="common" name="kernel/common" revision="android-4.19-stable" />
   <project path="kernel/tests" name="kernel/tests" />
   <project path="kernel/configs" name="kernel/configs" />
   <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="android-4.19-stable" />
-  <project path="prebuilts/gas/linux-x86" name="platform/prebuilts/gas/linux-x86" clone-depth="1" />
   <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" />
   <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" />
   <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" />
+
+  <!-- Cupida Kernel -->
+  <project path="kernel/realme/RMX3031" name="neilchetty/android_kernel_realme_RMX3031" remote="github" revision="lineage-20" />
+
+  <!-- GCC -->
+  <project path="prebuilts-master/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="github" revision="lineage-19.1" clone-depth="1" />
+  <project path="prebuilts-master/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" remote="github" revision="lineage-19.1" clone-depth="1" />
+
+  <!-- Clang -->
+  <project path="prebuilts-master/clang/host/linux-x86/clang-r487747" name="neilchetty/prebuilts_clang_host_linux-x86_clang-r487747" remote="gitlab" revision="master" clone-depth="1" />
+
 </manifest>
