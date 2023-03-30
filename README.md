@@ -1,6 +1,6 @@
 ## Repo Init ##
 ```bash
-repo init -u https://github.com/neilchetty/android_kernel_manifest.git -b android-mtk-rmx3031-4.19-android11
+repo init --depth=1 -u https://github.com/nishant6342/android_kernel_manifest.git -b android-mtk-rmx3031-4.19-android11
 ```
 ## Sync Source ##
 ```bash

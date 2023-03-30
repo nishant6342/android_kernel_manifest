@@ -21,7 +21,7 @@
   <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" />
 
   <!-- Cupida Kernel -->
-  <project path="kernel/realme/RMX3031" name="neilchetty/android_kernel_realme_RMX3031" remote="github" revision="lineage-20" />
+  <project path="kernel/realme/RMX3031" name="nishant6342/kernel_realme_RMX3031" remote="github" revision="T" />
 
   <!-- GCC -->
   <project path="prebuilts-master/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" remote="github" revision="lineage-19.1" clone-depth="1" />
